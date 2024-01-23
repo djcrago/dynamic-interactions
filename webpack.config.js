@@ -16,7 +16,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      title: 'Project Title',
+      title: 'Dynamic User Interface Interactions',
     }),
   ],
   module: {
