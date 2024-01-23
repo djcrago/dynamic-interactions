@@ -71,3 +71,7 @@ img {
 .messages {
     background-color: rgb(233, 233, 233);
 }
+
+.invisible {
+    opacity: 0;
+}

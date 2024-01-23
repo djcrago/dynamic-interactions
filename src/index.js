@@ -1,5 +1,9 @@
 import './style.css';
+import toggleClass from './toggleClass';
 
 const menu = document.querySelector('.menu');
+const menuItems = document.querySelector('.menu-items');
 
-console.log(menu);
+menu.addEventListener('click', () => {
+    toggleClass(menuItems, 'invisible')
+});
