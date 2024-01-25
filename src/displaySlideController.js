@@ -1,21 +1,18 @@
 import getImages from "./getImages";
 import displaySlide from "./displaySlide";
 import loopDisplaySlideController from "./loopDisplaySlideController";
-import colorImageIndicator from "./colorImageIndicator";
 
 const images = getImages();
 let i = 0;
 
 export default function displaySlideController() {
 
-    displaySlide(images[i]);
-
-    colorImageIndicator(i);
+    displaySlide(i);
 
     setTimeout(() => {
         const previousImage = document.querySelector('.image');
 
-        displaySlide(images[i]);
+        displaySlide(i);
 
         if (previousImage !== null) {
             for (let j = 0; j < images.length; j += 1) {

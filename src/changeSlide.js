@@ -3,11 +3,11 @@ import getImages from "./getImages";
 
 const images = getImages();
 
-export default function changeSlide(targetSlide) {
-    images.forEach((image) => {
-        if (image.src === targetSlide.src) {
-            displaySlide(targetSlide);
+export default function changeSlide(slideIndex) {
+    for (let i = 0; i < images.length; i += 1) {
+        if (i === slideIndex) {
+            displaySlide(slideIndex);
         }
-    });
+    }
 
 }
