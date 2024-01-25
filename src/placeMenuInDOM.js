@@ -1,6 +1,8 @@
-export default function placeMenuInDOM() {
+export default function placeMenuInDOM(vw) {
     const menuItems = document.querySelector('.menu-items');
-    const vw = window.visualViewport.width;
+
+    menuItems.style.top = '';
+    menuItems.style.right = '';
 
     if (vw > 682) {
         menuItems.style.top = '110px';
