@@ -28,7 +28,7 @@ body {
 .menu {
     display: flex;
     padding: 4px;
-    background-color: rgb(242, 242, 242);
+    background-color: rgb(255, 246, 246);
     border: 1px solid #000;
     border-radius: 8px;
     margin: 0 8px;
@@ -44,15 +44,13 @@ img {
 }
 
 .menu:active {
-    background-color: rgb(218, 218, 218);
+    background-color: rgb(255, 246, 246);
 }
 
 .menu-items {
     display: flex;
     flex-direction: column;
     position: absolute;
-    /* top: 110px;
-    right: 40px; */
     background-color: white;
     border: 1px solid #000;
     border-radius: 4px;
@@ -70,16 +68,16 @@ img {
 }
 
 .menu-items div:hover {
-    background-color: lightgray;
+    background-color: rgb(255, 182, 182);
     cursor: pointer;
 }
 
 .menu-items div:active {
-    background-color: rgb(172, 172, 172);
+    background-color: rgba(255, 0, 0, 0.491);
 }
 
 .messages {
-    background-color: rgb(255, 182, 182);
+    background-color: rgba(255, 0, 0, 0.141);
 }
 
 .invisible {
