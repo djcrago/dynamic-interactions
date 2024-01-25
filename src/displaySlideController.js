@@ -15,7 +15,7 @@ export default function displaySlideController() {
     }
 
     const loopDelay = images.length * 5000;
-    
+
     setTimeout(() => {
         loopDisplaySlideController()
     }, loopDelay);
