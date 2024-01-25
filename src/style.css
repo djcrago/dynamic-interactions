@@ -141,3 +141,7 @@ body {
     cursor: pointer;
     margin: 0 auto;
 }
+
+.colored {
+    background-color: rgb(255, 127, 127);
+}
