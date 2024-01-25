@@ -1,6 +1,7 @@
-import displaySlideController from './displaySlideController';
+import advanceSlide from './advanceSlide';
 import Left from './photos/arrow-left-bold.svg';
 import Right from './photos/arrow-right-bold.svg';
+import reverseSlide from './reverseSlide';
 
 export default function addArrowImages() {
     const previousImage = document.querySelector('.previous-image');
@@ -9,11 +10,7 @@ export default function addArrowImages() {
     previousImage.src = Left;
     nextImage.src = Right;
 
-    previousImage.addEventListener('click', () => {
-        displaySlideController(-1)
-    });
+    previousImage.addEventListener('click', reverseSlide);
 
-    nextImage.addEventListener('click', () => {
-        displaySlideController(1);
-    });
+    nextImage.addEventListener('click', advanceSlide);
 }

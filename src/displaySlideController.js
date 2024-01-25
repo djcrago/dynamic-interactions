@@ -6,45 +6,26 @@ const images = getImages();
 let i = 0;
 
 export default function displaySlideController(input) {
-
-    if (!input) {
-        displaySlide(i);
-
-        setTimeout(() => {
-        const previousImage = document.querySelector('.image');
-
-        displaySlide(i);
-
-        if (previousImage !== null) {
-            for (let j = 0; j < images.length; j += 1) {
-                if (previousImage.src === images[j].src) {
-                    i = j;
-                }
-            }
-        }
-        }, 5000);
-    }
-
     if (input) {
         console.log(input);
         i += input;
+    }
 
-        displaySlide(i);
+    displaySlide(i);
 
-        setTimeout(() => {
-        const previousImage = document.querySelector('.image');
+    setTimeout(() => {
+    const previousImage = document.querySelector('.image');
 
-        displaySlide(i);
+    displaySlide(i);
 
-        if (previousImage !== null) {
-            for (let j = 0; j < images.length; j += 1) {
-                if (previousImage.src === images[j].src) {
-                    i = j;
-                }
+    if (previousImage !== null) {
+        for (let j = 0; j < images.length; j += 1) {
+            if (previousImage.src === images[j].src) {
+                i = j;
             }
         }
-        }, 5000);
     }
+    }, 5000);
 
     setTimeout(() => {
         i += 1;
