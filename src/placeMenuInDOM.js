@@ -1,6 +1,6 @@
-export default function placeMenuInDOM(vw) {
-    const menuItems = document.querySelector('.menu-items');
+const menuItems = document.querySelector('.menu-items');
 
+export default function placeMenuInDOM(vw) { 
     menuItems.style.cssText = 'top: ; right: ;';
 
     if (vw > 682) {

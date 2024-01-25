@@ -1,30 +1,28 @@
 import getImages from "./getImages";
 import displaySlide from "./displaySlide";
+import loopDisplaySlideController from "./loopDisplaySlideController";
+
+const imageSlider = document.querySelector('.image-slider');
+const images = getImages();
 
 export default function displaySlideController() {
-    // const imageSlider = document.querySelector('.image-slider');
+    let i = 0;
 
-    // const images = getImages();
+    displaySlide(images[i]);
 
-    // const images = getImages();
+    setTimeout(() => {
+        i +=1;
+        displaySlide(images[i]);
+    }, 5000);
 
-    // // const imageSlider = document.querySelector('.image-slider');
+    setTimeout(() => {
+        i += 1;
+        displaySlide(images[i]);
+    }, 10000);
 
-    // displaySlide(images[0]);
-
-    // setTimeout(() => {
-    //     displaySlide(images[1]);
-    // }, 5000);
-
-    // setTimeout(() => {
-    //     displaySlide(images[2]);
-    // }, 10000);
-
-    const i = 0;
-    while (true) {
-        setTimeout(() => {
-            console.log('hey');
-        }, 5000);
-    }
+    setTimeout(() => {
+        console.log(imageSlider);
+        loopDisplaySlideController()
+    }, 15000)
 
 }
