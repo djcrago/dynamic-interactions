@@ -1,4 +1,6 @@
+import addMenuItemImages from './addMenuItemImages';
 import displaySlide from './displaySlide';
+import displaySlideController from './displaySlideController';
 import getImages from './getImages';
 import placeMenuInDOMController from './placeMenuInDOMController';
 import './style.css';
@@ -27,3 +29,7 @@ setTimeout(() => {
 setTimeout(() => {
     displaySlide(images[2]);
 }, 10000);
+
+// displaySlideController();
+
+addMenuItemImages();
