@@ -2,27 +2,22 @@ import getImages from "./getImages";
 import displaySlide from "./displaySlide";
 import loopDisplaySlideController from "./loopDisplaySlideController";
 
-const imageSlider = document.querySelector('.image-slider');
 const images = getImages();
 
 export default function displaySlideController() {
-    let i = 0;
+    let delay = 0;
 
-    displaySlide(images[i]);
+    for (let i = 0; i < images.length; i += 1) {
+        setTimeout(() => {
+            displaySlide(images[i]);
+        }, delay);
+        delay += 5000;
+    }
 
+    const loopDelay = images.length * 5000;
+    
     setTimeout(() => {
-        i +=1;
-        displaySlide(images[i]);
-    }, 5000);
-
-    setTimeout(() => {
-        i += 1;
-        displaySlide(images[i]);
-    }, 10000);
-
-    setTimeout(() => {
-        console.log(imageSlider);
         loopDisplaySlideController()
-    }, 15000)
+    }, loopDelay);
 
 }
