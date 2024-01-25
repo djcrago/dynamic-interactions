@@ -34,7 +34,7 @@ body {
     margin: 0 8px;
 }
 
-img {
+.header img {
     height: 30px;
 }
 
@@ -82,4 +82,12 @@ img {
 
 .invisible {
     opacity: 0;
+}
+
+.image-slider {
+    border: 1px solid #000;
+}
+
+.image {
+    height: 500px;
 }

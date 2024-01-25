@@ -1,3 +1,4 @@
+import getImages from './getImages';
 import placeMenuInDOMController from './placeMenuInDOMController';
 import './style.css';
 import toggleClass from './toggleClass';
@@ -11,3 +12,11 @@ menu.addEventListener('click', () => {
 
 window.addEventListener('DOMContentLoaded', placeMenuInDOMController);
 window.addEventListener('resize', placeMenuInDOMController);
+
+const images = getImages();
+
+const imageSlider = document.querySelector('.image-slider');
+
+images.forEach((image) => {
+    imageSlider.appendChild(image);
+});
