@@ -1,3 +1,4 @@
+import displaySlideController from './displaySlideController';
 import Left from './photos/arrow-left-bold.svg';
 import Right from './photos/arrow-right-bold.svg';
 
@@ -7,4 +8,12 @@ export default function addArrowImages() {
 
     previousImage.src = Left;
     nextImage.src = Right;
+
+    previousImage.addEventListener('click', () => {
+        displaySlideController(-1)
+    });
+
+    nextImage.addEventListener('click', () => {
+        displaySlideController(1);
+    });
 }

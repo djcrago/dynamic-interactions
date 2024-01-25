@@ -119,6 +119,7 @@ body {
     height: 75px;
     margin: 0 auto;
     border-radius: 16px;
+    cursor: pointer;
 }
 
 .image-indicators {
