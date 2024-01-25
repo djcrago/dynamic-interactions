@@ -1,4 +1,4 @@
-import placeMenuInDOM from './placeMenuInDOM';
+import placeMenuInDOMController from './placeMenuInDOMController';
 import './style.css';
 import toggleClass from './toggleClass';
 
@@ -9,7 +9,5 @@ menu.addEventListener('click', () => {
     toggleClass(menuItems, 'invisible');
 });
 
-window.addEventListener('resize', () => {
-    const vw = window.visualViewport.width;
-    placeMenuInDOM(vw);
-})
+window.addEventListener('DOMContentLoaded', placeMenuInDOMController);
+window.addEventListener('resize', placeMenuInDOMController);
