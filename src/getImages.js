@@ -13,6 +13,7 @@ export default function getImages() {
 
     imageSources.forEach((imageSource) => {
         const img = document.createElement('img');
+        img.classList.toggle('image');
         img.src = imageSource;
         images.push(img);
     });

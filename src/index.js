@@ -1,3 +1,4 @@
+import displaySlide from './displaySlide';
 import getImages from './getImages';
 import placeMenuInDOMController from './placeMenuInDOMController';
 import './style.css';
@@ -15,8 +16,14 @@ window.addEventListener('resize', placeMenuInDOMController);
 
 const images = getImages();
 
-const imageSlider = document.querySelector('.image-slider');
+// const imageSlider = document.querySelector('.image-slider');
 
-images.forEach((image) => {
-    imageSlider.appendChild(image);
-});
+displaySlide(images[0]);
+
+setTimeout(() => {
+    displaySlide(images[1]);
+}, 5000);
+
+setTimeout(() => {
+    displaySlide(images[2]);
+}, 10000);

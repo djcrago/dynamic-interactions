@@ -85,9 +85,14 @@ body {
 }
 
 .image-slider {
-    border: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0.691);
+    margin: 15vh 0;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image {
-    height: 500px;
+    height: 400px;
 }
