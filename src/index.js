@@ -1,15 +1,15 @@
 import './style.css';
 import initializeMenu from './initializeMenu';
-import displaySlideController from './displaySlideController';
-import addArrowImages from './addArrowImages';
-import addImageIndicatorController from './addImageIndicatorController';
-import colorImageIndicator from './colorImageIndicator';
+import loopThroughImages from "./loopThroughImages";
+import getImages from './getImages';
+import initializeImageContainer from './initializeImageContainer';
+
+const images = getImages();
+
+export default images;
 
 initializeMenu();
 
-addArrowImages();
-addImageIndicatorController();
+initializeImageContainer(images.length);
 
-displaySlideController();
-
-colorImageIndicator(0);
+loopThroughImages();

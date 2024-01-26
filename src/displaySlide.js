@@ -1,14 +1,10 @@
-import colorImageIndicator from "./colorImageIndicator";
-import getImages from "./getImages";
+import images from ".";
 
 export default function displaySlide(index) {
-    const images = getImages();
-    const imageSlider = document.querySelector('.image-container');
+    const imageContainer = document.querySelector('.image-container');
 
-    imageSlider.innerHTML = '';
+    imageContainer.innerHTML = '';
 
-    imageSlider.appendChild(images[index]);
-
-    colorImageIndicator(index);
+    imageContainer.appendChild(images[index]);
 
 }
